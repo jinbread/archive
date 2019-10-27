@@ -1,17 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Heart } from "react-feather";
 
 const container = {
   width: "100%",
   minHeight: 240,
   // background: "white",
-  borderRadius: 16,
+  borderRadius: 12,
   // marginBottom: 24,
   position: "relative",
   marginLeft: "auto",
   marginRight: "auto",
-  border: "1px solid white",
-  boxShadow: "0 0 20px 0 rgba(0, 0, 0, .15)"
+  border: "1px solid rgba(255, 255, 255, 0)",
+  boxShadow: "0 0 20px 0 rgba(0, 0, 0, .15)",
+  background: "linear-gradient(45deg, #bb66cc 0%, #55ccff 100%)",
+  backgroundRepeat: "no-repeat"
+  // backgroundAttachment: "fixed"
 };
 
 const wrapper = {
@@ -20,23 +24,23 @@ const wrapper = {
 };
 
 const h2Text = {
-  color: "black",
+  color: "white",
   textAlign: "left",
   fontWeight: 600,
   marginBottom: "4px"
 };
 
 const subText = {
-  color: "black",
+  color: "white",
   textAlign: "left",
   fontWeight: 400,
-  opacity: 0.9,
+  opacity: 0.7,
   fontSize: "0.8em",
   marginBottom: "4px"
 };
 
 const descText = {
-  color: "blue",
+  color: "white",
   fontWeight: 600,
   fontSize: "0.6em",
   marginBottom: "4px",
@@ -50,7 +54,7 @@ const descText = {
   paddingRight: 8,
   paddingLeft: 8,
   borderRadius: 4,
-  border: "1px solid blue"
+  border: "1px solid white"
 };
 
 const tagPlace = {
@@ -60,15 +64,13 @@ const tagPlace = {
   marginBottom: 8
 };
 
-export const Card = ({ title, brand, date, summary, tags, animation }) => {
+export const Card = ({ title, brand, date, summary, tags, onTap, count }) => {
   return (
     <motion.div
       opacity={0}
-      scale={0.8}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.4 }}
       style={container}
-      variants={animation}
+      // whileTap={{ scale: 0.98 }}
+      whileHover={{ scale: 0.98 }}
     >
       <div style={wrapper}>
         <h3 style={subText}>
@@ -85,18 +87,24 @@ export const Card = ({ title, brand, date, summary, tags, animation }) => {
             );
           })}
         </ul>
-        <p style={{ lineHeight: "1.3em" }}>{summary}</p>
+        {/* <p style={{ lineHeight: "1.4em", fontSize: "0.95em" }}>{summary}</p> */}
       </div>
       <div
         style={{
-          // display: "block",
           position: "absolute",
           marginLeft: 24,
           marginRight: 24,
-          // marginBottom: 24,
           bottom: 0
         }}
       />
+      <div style={{ position: "absolute", bottom: 24, right: 24 }}>
+        <motion.div onTap={onTap} whileTap={{ scale: 0.9 }}>
+          <Heart color={"white"} />
+        </motion.div>
+        <p style={{ textAlign: "center", fontSize: "0.8em", color: "white" }}>
+          {count}
+        </p>
+      </div>
     </motion.div>
   );
 };
