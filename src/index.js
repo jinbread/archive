@@ -208,10 +208,10 @@ function App() {
             style={{
               marginTop: 16,
               fontSize: "2.4em",
+              letterSpacing: -0.9,
               fontFamily: "GmarketSans",
-              lineHeight: "1.4em",
-              // opacity: 0.2,
-              fontWeight: 600,
+              lineHeight: "1.3em",
+              fontWeight: 300,
               opacity: 0.2,
               color: "black"
             }}
@@ -223,7 +223,7 @@ function App() {
             {window.innerWidth > 640
               ? "리액트 / 자바스크립트 / 아두이노 "
               : "코딩"}{" "}
-            / 브랜드 전략 / 워크숍 / 글
+            / 브랜드 전략 / 워크숍 / 글쓰기
             {window.innerWidth > 640 && " / 세미나 / 커뮤니티"}
           </p>
           <form>
@@ -251,7 +251,7 @@ function App() {
         </section>
 
         <section style={{ marginBottom: 48, marginLeft: 24, marginRight: 24 }}>
-          <h2 style={{ position: "sticky", top: 24 }}>— Ongoing</h2>
+          <h2 style={{ position: "sticky", top: 24, zIndex: 10 }}>— Ongoing</h2>
           <motion.div
             initial="hidden"
             animate="visible"
@@ -278,7 +278,7 @@ function App() {
         </section>
 
         <section style={{ marginBottom: 48, marginLeft: 24, marginRight: 24 }}>
-          <h2 style={{ position: "sticky", top: 24 }}>— Done</h2>
+          <h2 style={{ position: "sticky", top: 24, zIndex: 10 }}>— Done</h2>
 
           <motion.div
             initial="hidden"

@@ -85,13 +85,14 @@ ul {
 
 a {
   text-decoration: none;
+  color: black;
   opacity: 0.6;
 }
 
 a:hover {
   text-decoration: none;
   color: black;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 a:visited {
