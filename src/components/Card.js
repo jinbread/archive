@@ -5,21 +5,18 @@ import { Heart } from "react-feather";
 const container = {
   width: "100%",
   minHeight: 240,
-  // background: "white",
   borderRadius: 12,
-  // marginBottom: 24,
   position: "relative",
   marginLeft: "auto",
   marginRight: "auto",
-  border: "1px solid rgba(255, 255, 255, 0)",
+  border: "none",
   boxShadow: "0 0 20px 0 rgba(0, 0, 0, .15)",
   background: "linear-gradient(45deg, #bb66cc 0%, #55ccff 100%)",
   backgroundRepeat: "no-repeat"
-  // backgroundAttachment: "fixed"
 };
 
 const wrapper = {
-  margin: 24,
+  padding: 24,
   borderRadius: 24
 };
 
@@ -69,8 +66,8 @@ export const Card = ({ title, brand, date, summary, tags, onTap, count }) => {
     <motion.div
       opacity={0}
       style={container}
-      // whileTap={{ scale: 0.98 }}
-      whileHover={{ scale: 0.98 }}
+      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 0.95 }}
     >
       <div style={wrapper}>
         <h3 style={subText}>
@@ -87,7 +84,6 @@ export const Card = ({ title, brand, date, summary, tags, onTap, count }) => {
             );
           })}
         </ul>
-        {/* <p style={{ lineHeight: "1.4em", fontSize: "0.95em" }}>{summary}</p> */}
       </div>
       <div
         style={{

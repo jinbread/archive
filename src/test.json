@@ -1,0 +1,138 @@
+{
+  "ongoing": [
+    {
+      "title": "Machine Learning Prototyping for designers",
+      "tags": ["Workshop", "AI/ML", "Prototyping", "Arduino"],
+      "date": "2019.10",
+      "brand": "Hongik University",
+      "summary": "간단한 프로토타입을 함께 만들어보면서 머신러닝의 기본 개념을 이해하고, 실제 프로젝트에서 활용 가능한 프로토타입을 제작하기 위한 기초 스킬을 쌓을 수 있는 워크숍이다.",
+      "like": 0,
+      "state": "ongoing"
+    },
+    {
+      "title": "Brand Strategy & Copywriting",
+      "tags": ["Branding", "Strategy", "Copywriting"],
+      "date": "2019.11",
+      "brand": "Duotone",
+      "like": 0,
+      "state": "ongoing"
+    },
+    {
+      "title": "Inspiration — Spectrum Day #13",
+      "tags": ["Community"],
+      "date": "2019.11",
+      "brand": "Design Spectrum",
+      "like": 0,
+      "state": "ongoing"
+    },
+    {
+      "title": "AI Trip Guide",
+      "tags": ["Product Design", "UX Design"],
+      "date": "2019.12",
+      "brand": "Data Labs",
+      "like": 0
+    },
+    {
+      "title": "How to cope with the future as an Industrial Designer — Spectrum Day #14",
+      "tags": ["Community", "Visual Design"],
+      "date": "2019.11",
+      "brand": "Design Spectrum",
+      "like": 0
+    },
+    {
+      "title": "Year-end Workshop 2019",
+      "tags": ["Workshop", "Facilitation"],
+      "date": "2019.12",
+      "brand": "Jinbread Works",
+      "like": 0
+    }
+  ],
+  "done": [
+    {
+      "title": "Hangul in Motion",
+      "tags": ["Interaction Design", "Frontend Development", "Javascript"],
+      "date": "2019.10",
+      "brand": "Project HIUT",
+      "like": 0,
+      "state": "done"
+    },
+    {
+      "title": "Hyundai WRC Real Play",
+      "tags": [
+        "VR",
+        "Digital Strategy",
+        "UX Design",
+        "Content Production",
+        "Mobile",
+        "Hardware"
+      ],
+      "date": "2015",
+      "brand": "Hyundai Motorsport",
+      "summary": "This was first ever virtual reality contents for automotive industry.",
+      "like": 0,
+      "state": "done"
+    },
+    {
+      "title": "What's Next?",
+      "tags": ["Talks", "Seminar"],
+      "date": "2019.07",
+      "brand": "Startup Alliance",
+      "like": 0,
+      "state": "done"
+    },
+    {
+      "title": "Future of the experiences around PC",
+      "tags": [
+        "Interaction Design",
+        "Prototyping",
+        "React",
+        "Framer X",
+        "UX Engineering"
+      ],
+      "date": "2019.07",
+      "brand": "Dell",
+      "like": 0,
+      "state": "done"
+    },
+    {
+      "title": "Future of the TV",
+      "brand": "Huawei",
+      "tags": ["UI Design", "Interaction Design", "Prototyping"],
+      "date": "2019.03",
+      "like": 0
+    },
+    {
+      "title": "Year-end Workshop 2018",
+      "tags": ["Workshop", "Facilitation"],
+      "date": "2018.12",
+      "brand": "Jinbread Works",
+      "like": 0
+    },
+    {
+      "title": "Home Wellbeing Experience",
+      "brand": "Electrolux",
+      "tags": ["UX Design", "Interaction Design", "Prototyping"],
+      "date": "2018.12",
+      "like": 0
+    },
+    {
+      "title": "IxDA Stockholm",
+      "brand": "IxDA Stockholm",
+      "tags": ["Community", "Photography"],
+      "date": "2018",
+      "like": 0
+    },
+    {
+      "title": "Air Monitoring Product Design",
+      "tags": [
+        "UX Design",
+        "Interaction Design",
+        "Prototyping",
+        "Connected Product"
+      ],
+      "date": "2018.07",
+      "brand": "Blueair",
+      "like": 0
+    }
+  ]
+}
