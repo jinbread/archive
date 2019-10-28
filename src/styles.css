@@ -134,7 +134,7 @@ a:active {
 @media screen and (max-width: 600px) {
   .search-container {
     font-size: 1.4em;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -0.03em;
   }
 }
