@@ -17,7 +17,7 @@ export const CardList = ({ data, dataLabel }) => {
   const list = {
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1 }
+      transition: { staggerChildren: 0.1, ease: "easeInOut" }
     },
     hidden: { opacity: 0 }
   };
@@ -26,9 +26,9 @@ export const CardList = ({ data, dataLabel }) => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.25, ease: "easeInOut" }
+      transition: { duration: 0.325, ease: "easeInOut" }
     },
-    hidden: { opacity: 0, y: 60 }
+    hidden: { opacity: 0, y: 40 }
   };
 
   const onTap = e => {

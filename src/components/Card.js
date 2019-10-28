@@ -63,12 +63,7 @@ const tagPlace = {
 
 export const Card = ({ title, brand, date, summary, tags, onTap, count }) => {
   return (
-    <motion.div
-      opacity={0}
-      style={container}
-      whileTap={{ scale: 0.95 }}
-      whileHover={{ scale: 0.95 }}
-    >
+    <motion.div opacity={0} style={container} whileHover={{ scale: 0.95 }}>
       <div style={wrapper}>
         <h3 style={subText}>
           {brand} — {date}
@@ -93,14 +88,14 @@ export const Card = ({ title, brand, date, summary, tags, onTap, count }) => {
           bottom: 0
         }}
       />
-      <div style={{ position: "absolute", bottom: 24, right: 24 }}>
-        <motion.div onTap={onTap} whileTap={{ scale: 0.9 }}>
+      {/* <div style={{ position: "absolute", bottom: 24, right: 24 }}>
+        <motion.div onTap={onTap} whileTap={{ scale: 0.8 }}>
           <Heart color={"white"} />
         </motion.div>
         <p style={{ textAlign: "center", fontSize: "0.8em", color: "white" }}>
           {count}
         </p>
-      </div>
+      </div> */}
     </motion.div>
   );
 };
