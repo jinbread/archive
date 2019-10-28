@@ -9,6 +9,7 @@ import "./styles.css";
 import test from "./test.json";
 
 function App() {
+  console.log("render");
   const doneData = test.filter(x => x.state === "done");
   const ongoingData = test.filter(x => x.state === "ongoing");
 
@@ -55,7 +56,7 @@ function App() {
 
         <Header inputValue={searchInput} onChange={onChange} />
         <CardList data={ongoing} dataLabel={"Ongoing"} />
-        <CardList data={done} dataLabel={"Done"} />
+        <CardList data={done} dataLabel={"Archive"} />
         <Footer />
       </section>
     </div>

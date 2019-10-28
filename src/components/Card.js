@@ -88,14 +88,14 @@ export const Card = ({ title, brand, date, summary, tags, onTap, count }) => {
           bottom: 0
         }}
       />
-      {/* <div style={{ position: "absolute", bottom: 24, right: 24 }}>
+      <div style={{ position: "absolute", bottom: 24, right: 24 }}>
         <motion.div onTap={onTap} whileTap={{ scale: 0.8 }}>
           <Heart color={"white"} />
         </motion.div>
         <p style={{ textAlign: "center", fontSize: "0.8em", color: "white" }}>
           {count}
         </p>
-      </div> */}
+      </div>
     </motion.div>
   );
 };
