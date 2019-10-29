@@ -8,32 +8,47 @@ import { Menu } from "react-feather";
 import "./styles.css";
 import test from "./test.json";
 
+const setData = (dataset, input) => {
+  return dataset.filter(x =>
+    x.title.toLowerCase().includes(input.toLowerCase())
+  );
+};
+
 function App() {
-  console.log("render");
   const doneData = test.filter(x => x.state === "done");
   const ongoingData = test.filter(x => x.state === "ongoing");
 
-  const [ongoing, setOngoing] = React.useState(ongoingData);
-  const [done, setDone] = React.useState(doneData);
   const [searchInput, setSearchInput] = React.useState("");
 
-  React.useEffect(() => {
-    if (searchInput !== "") {
-      setOngoing(
-        ongoingData.filter(x =>
-          x.title.toLowerCase().includes(searchInput.toLowerCase())
-        )
-      );
-      setDone(
-        doneData.filter(x =>
-          x.title.toLowerCase().includes(searchInput.toLowerCase())
-        )
-      );
-    } else {
-      setOngoing(ongoingData);
-      setDone(doneData);
-    }
-  }, [searchInput, doneData, ongoingData]);
+  const done = React.useMemo(() => setData(doneData, searchInput), [
+    doneData,
+    searchInput
+  ]);
+
+  console.log(done);
+
+  const ongoing = React.useMemo(() => setData(ongoingData, searchInput), [
+    ongoingData,
+    searchInput
+  ]);
+
+  // const [ongoing, setOngoing] = React.useState(ongoingData);
+  // const [done, setDone] = React.useState(doneData);
+
+  // React.useEffect(() => {
+  //   if (searchInput !== "") {
+  //     setOngoing(
+  //       ongoingData.filter(x =>
+  //         x.title.toLowerCase().includes(searchInput.toLowerCase())
+  //       )
+  //     );
+  //     setDone(
+  //       doneData.filter(x =>
+  //         x.title.toLowerCase().includes(searchInput.toLowerCase())
+  //       )
+  //     );
+  //   }
+  // }, [searchInput, doneData, ongoingData]);
 
   const onChange = e => {
     setSearchInput(e.target.value);

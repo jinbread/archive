@@ -13,7 +13,7 @@ const gridStyle = {
   gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))"
 };
 
-export const CardList = ({ data, dataLabel }) => {
+export const CardList = React.memo(({ data, dataLabel }) => {
   const list = {
     visible: {
       opacity: 1,
@@ -63,4 +63,4 @@ export const CardList = ({ data, dataLabel }) => {
       </motion.div>
     </section>
   );
-};
+});

@@ -61,41 +61,43 @@ const tagPlace = {
   marginBottom: 8
 };
 
-export const Card = ({ title, brand, date, summary, tags, onTap, count }) => {
-  return (
-    <motion.div opacity={0} style={container} whileHover={{ scale: 0.95 }}>
-      <div style={wrapper}>
-        <h3 style={subText}>
-          {brand} — {date}
-        </h3>
+export const Card = React.memo(
+  ({ title, brand, date, summary, tags, onTap, count }) => {
+    return (
+      <motion.div opacity={0} style={container} whileHover={{ scale: 0.95 }}>
+        <div style={wrapper}>
+          <h3 style={subText}>
+            {brand} — {date}
+          </h3>
 
-        <h2 style={h2Text}>{title}</h2>
-        <ul style={tagPlace}>
-          {tags.map((tag, i) => {
-            return (
-              <li key={i} style={descText}>
-                {tag}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          marginLeft: 24,
-          marginRight: 24,
-          bottom: 0
-        }}
-      />
-      <div style={{ position: "absolute", bottom: 24, right: 24 }}>
-        <motion.div onTap={onTap} whileTap={{ scale: 0.8 }}>
-          <Heart color={"white"} />
-        </motion.div>
-        <p style={{ textAlign: "center", fontSize: "0.8em", color: "white" }}>
-          {count}
-        </p>
-      </div>
-    </motion.div>
-  );
-};
+          <h2 style={h2Text}>{title}</h2>
+          <ul style={tagPlace}>
+            {tags.map((tag, i) => {
+              return (
+                <li key={i} style={descText}>
+                  {tag}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            marginLeft: 24,
+            marginRight: 24,
+            bottom: 0
+          }}
+        />
+        <div style={{ position: "absolute", bottom: 24, right: 24 }}>
+          <motion.div onTap={onTap} whileTap={{ scale: 0.8 }}>
+            <Heart color={"white"} />
+          </motion.div>
+          <p style={{ textAlign: "center", fontSize: "0.8em", color: "white" }}>
+            {count}
+          </p>
+        </div>
+      </motion.div>
+    );
+  }
+);
